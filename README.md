@@ -14,3 +14,4 @@ terraform validate
 
 terraform plan -out kc1.tfplan
 terraform apply kc1.tfplan
+```
