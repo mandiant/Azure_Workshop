@@ -1,4 +1,4 @@
-# Azure Red Team Attack and Detect Workshop delivered at SteelCon - July 2022
+# Azure Red Team Attack and Detect Workshop - SteelCon July 2022
 
 ## Global changes needed before deploying in your own Azure tenant
 - login as GA on your Azure tenant via AZ CLI
