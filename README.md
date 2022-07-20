@@ -1,4 +1,4 @@
-# Azure Workshop delivered at SteelCon - July 2022
+# Azure Red Team Attack and Detect Workshop delivered at SteelCon - July 2022
 
 ## Global changes needed before deploying in your won Azure tenant
 - login as GA on your Azure tenant via AZ CLI
@@ -7,7 +7,7 @@
 ### KC1
 - add your external IP for MSSQL firewall on line 253-254
 
-## Run the Terraform scripts 
+### Run the Terraform scripts 
 ```
 terraform init
 terraform validate
