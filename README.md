@@ -1,6 +1,6 @@
 # Azure Red Team Attack and Detect Workshop delivered at SteelCon - July 2022
 
-## Global changes needed before deploying in your won Azure tenant
+## Global changes needed before deploying in your own Azure tenant
 - login as GA on your Azure tenant via AZ CLI
 - add tenant domain name on line 7 on both kc1.tf and kc2.tf
 
