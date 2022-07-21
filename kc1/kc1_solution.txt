@@ -1,0 +1,44 @@
+- chris.green has Application Administrator role which means he can add credentials to the InnovationApp
+az login -u <\UserName> -p <\Password> --allow-no-subscriptions
+az ad app list --query "[].[displayName,objectId]" -o table
+az ad app credential reset --id <\AppObejctID>
+
+- login as InnovationApp Service Principle
+az login --service-principal -u <\AppID> -p <\Password> -t <\TenantID> --allow-no-subscriptions
+
+- SP has Key Vault Reader and Key Vault Secrets User RBAC
+az keyvault list
+az keyvault secret list --vault-name <\KeyVaultName>
+
+- extract Key Vault secrets
+az keyvault secret show --vault-name <\KeyVaultName> --name <\SecretName>
+
+- ForPW secret -> indicating creds for peter.williams which has contributor access to an automation account (Linux user, has CA rules)
+az login -u <\UserName> -p <\Password>
+az role assignment list --all --assignee <\UserName>
+
+- extract access token from Linux machine
+az account get-access-token
+
+- import the above access token and login on a Windows machine
+Connect-AzAccount -AccountId <\UserName> -AccessToken $token
+Import-Module .\Get-AzPasswords.ps1
+
+- extract credentials from the automation account using MicroBurst script
+Get-AzPasswords -AutomationAccounts Y -Keys N -AppServices N -StorageAccounts N -ExportCerts N -Subscription <\SubscriptionID> -Verbose -CosmosDB N
+
+- login as the sqladmin user and list current roles
+az login -u <\UserName> -p <\Password>
+az role assignment list --all --assignee <\UserName>
+
+- list SQL server and DB
+az sql server list
+az sql db list -s <\SQL-SERVER> -g <\ResourceGroup> --output table
+az sql db show --name <\DB-NAME> -g <\ResourceGroup> -s <\SQL-SERVER>
+
+- connect to the MSSQL DB via Azure portal OR Visual Studio OR MS SQL Server Management Studio OR Cloudshell
+sqlcmd -S <\SQL-SERVER>.database.windows.net -U <\UserName> -P <\Password> -G 
+select @@version;
+go
+
+sqlcmd -S <\SQL-SERVER>.database.windows.net -U <\UserName> -P <\Password> -G -d <\DB-NAME> -Q "SELECT TOP 10 * FROM SalesLT.Customer;"

