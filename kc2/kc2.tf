@@ -337,12 +337,6 @@ resource "azurerm_role_assignment" "ACWindowsVM" {
   principal_id         = azurerm_linux_virtual_machine.LinuxVM.identity.0.principal_id
 }
 
-resource "azurerm_role_assignment" "ACInternalNIC" {
-  scope                = azurerm_network_interface.Internal1.id
-  role_definition_name = "Reader"
-  principal_id         = azurerm_linux_virtual_machine.LinuxVM.identity.0.principal_id
-}
-
 ## Output
 output "username" {
   value = "${var.user_name1}@${var.domain}"
