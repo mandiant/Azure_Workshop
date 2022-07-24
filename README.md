@@ -8,6 +8,7 @@ Each kill-chain has in its folder the Terraform script (and other pre-reqs files
 - Azure CLI
 - Terafform version 1.2.2 or above
 - Azure User with Global Admin role in the AAD tenant
+- add your external IP on lines 248-249 in kc1.tf
 
 ## Deployment
 ```
@@ -28,5 +29,5 @@ terraform apply kc1.tfplan
 ```
 terraform output --json
 ```
-- use username.value and password.value
+- use var.user_name1 and var.user_password1
 
