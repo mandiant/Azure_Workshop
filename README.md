@@ -64,5 +64,3 @@ terraform destroy
 cd ../kc2
 terraform destroy
 ```
-
-
