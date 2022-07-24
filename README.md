@@ -57,8 +57,8 @@ Other resources and useful links to learn more can be found in resources.txt fil
 After finishing with each kill-chain scenario, you can remove all resources previously added in your tenant:
 ```
 az login
-cd kc1
 
+cd kc1
 terraform destroy
 
 cd ../kc2
