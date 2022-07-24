@@ -54,7 +54,7 @@ Kill-Chain #2:
 Other resources and useful links to learn more can be found in resources.txt file.
 
 ## Clean up
-After finishing with each kill-chain scenario, you can remove all resources previously added in your tenant with the below:
+After finishing with each kill-chain scenario, you can remove all resources previously added in your tenant:
 ```
 az login
 cd kc1
