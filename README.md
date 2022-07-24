@@ -41,14 +41,14 @@ terraform output
 ## Kill-Chain objectives and other resources
 Kill-Chain #1:
 
-Objective: Gain access to the Customers PII data.
+- Objective: Gain access to the Customers PII data.
 
-Solutions: The full attack path solutions can be found in kc1/kc1_solution.txt
+- Solutions: The full attack path solutions can be found in kc1/kc1_solution.txt
 
 Kill-Chain #2:
 
-Objective: Gain access to the super secret file.
+- Objective: Gain access to the super secret file.
 
-Solutions: The full attack path solutions can be found in kc2/kc2_solution.txt
+- Solutions: The full attack path solutions can be found in kc2/kc2_solution.txt
 
 Other resources and useful links to learn more can be found in resources.txt
