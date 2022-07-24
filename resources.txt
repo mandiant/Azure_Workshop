@@ -1,0 +1,47 @@
+=== Azure and Azure AD Resources ===
+# Attacking:
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Cloud%20-%20Azure%20Pentest.md
+https://github.com/Kyuu-Ji/Awesome-Azure-Pentest 
+https://posts.specterops.io/attacking-azure-azure-ad-and-introducing-powerzure-ca70b330511a 
+https://github.com/rootsecdev/Azure-Red-Team 
+https://o365blog.com/aadkillchain/
+https://www.netspi.com/blog/technical/ 
+https://github.com/netspi/microburst/
+https://pentestbook.six2dez.com/enumeration/cloud/azure
+https://improsec.com/tech-blog/read2own
+https://m365internals.com/2021/11/30/lateral-movement-with-managed-identities-of-azure-virtual-machines/
+https://github.com/dafthack/CloudPentestCheatsheets/blob/master/cheatsheets/Azure.md
+https://medium.com/xm-cyber/privilege-escalation-and-lateral-movement-on-azure-part-1-47e128cfdc06
+https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference
+https://posts.specterops.io/automating-azure-abuse-research-part-1-30b0eca33418
+https://posts.specterops.io/tagged/azure
+
+# Detection and Response:
+https://docs.microsoft.com/en-gb/azure/active-directory/identity-protection/concept-identity-protection-risks#sign-in-risk
+https://www.vansurksum.com/2020/04/07/azure-ad-identity-protection-deep-dive/
+https://cloudbrothers.info/en/azure-dominance-paths/
+https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries
+https://www.inversecos.com/2022/05/detection-and-compromise-azure-key.html
+https://www.inversecos.com/2022/01/how-to-detect-and-compromise-azure.html
+https://www.inversecos.com/2021/10/how-to-backdoor-azure-applications-and.html
+https://www.inversecos.com/2021/12/how-to-detect-malicious-azure.html
+https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/howto-identity-protection-simulate-risk
+https://github.com/uglide/azure-content/blob/master/articles/active-directory/active-directory-identityprotection.md
+https://docs.microsoft.com/en-us/security/compass/incident-response-playbooks
+https://docs.microsoft.com/en-us/azure/defender-for-cloud/managing-and-responding-alerts
+https://docs.microsoft.com/en-us/microsoft-365/security/defender/incidents-overview?view=o365-worldwide
+https://docs.microsoft.com/en-us/azure/sentinel/tutorial-respond-threats-playbook?tabs=LAC
+https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/microsoft-sentinel-automated-response
+
+# Other free Labs:
+https://github.com/cheahengsoon/Penetration-Testing-Azure-for-Ethical-Hackers
+https://github.com/azurecitadel/azure-security-lab
+https://github.com/XMCyber/XMGoat
+Build your own ->  https://twitter.com/msft_hiker/status/1516163983421624320
+Microsoft 365 Developer Account -> https://developer.microsoft.com/en-us/microsoft-365/dev-program
+
+# Paid Labs:
+Pentester Academy CARTP - https://bootcamps.pentesteracademy.com/course/ad-azure-sept-22
+Offensive Azure Security Professional (OASP) - https://cloudbreach.io/labs/
+HTB BlackSkey labs - https://www.hackthebox.com/business/professional-labs/cloud-labs-blacksky
+CyberWarfare Multi Cloud labs - https://www.cyberwarfare.live/trainings/certified-hybrid-multi-cloud-red-team-specialist
