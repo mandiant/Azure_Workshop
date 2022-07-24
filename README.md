@@ -29,5 +29,4 @@ terraform apply kc1.tfplan
 ```
 terraform output --json
 ```
-- use var.user_name1 and var.user_password1
 
