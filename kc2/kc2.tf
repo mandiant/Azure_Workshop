@@ -342,3 +342,11 @@ resource "azurerm_role_assignment" "ACInternalNIC" {
   role_definition_name = "Reader"
   principal_id         = azurerm_linux_virtual_machine.LinuxVM.identity.0.principal_id
 }
+
+## Output
+output "username" {
+  value = "${var.user_name1}@${var.domain}"
+}
+output "password" {
+  value = var.user_password1
+}

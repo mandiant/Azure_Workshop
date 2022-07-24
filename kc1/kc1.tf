@@ -134,7 +134,7 @@ resource "azuread_user" "user2" {
   display_name                = var.user_name2
   password                    = var.user_password2
   disable_password_expiration = true
-  department		              = "Linux user"
+  department                  = "Linux user"
 }
 
 resource "azuread_user" "user3" {
@@ -152,7 +152,6 @@ resource "azuread_application" "InnovationApp" {
 
 resource "azuread_service_principal" "InnovationAppSPN" {
   application_id               = azuread_application.InnovationApp.application_id
-  owners                       = [azuread_user.user1.id]
 }
 
 ## Key Vault ##
@@ -164,7 +163,7 @@ resource "azurerm_key_vault" "InnovationDeptKeyVault" {
   tenant_id                   = data.azurerm_client_config.current.tenant_id
   soft_delete_retention_days  = 7
   purge_protection_enabled    = false
-  sku_name 		      = "standard"
+  sku_name          = "standard"
 
   access_policy {
     tenant_id = data.azurerm_client_config.current.tenant_id
@@ -243,6 +242,13 @@ resource "azurerm_mssql_server" "AzureSQLServer" {
   }
 }
 
+resource "azurerm_mssql_firewall_rule" "SQLFirewallRule" {
+  name                = "AlllowAzureServices"
+  server_id           = azurerm_mssql_server.AzureSQLServer.id
+  start_ip_address    = "X.X.X.X"
+  end_ip_address      = "X.X.X.X"
+}
+
 resource "azurerm_mssql_database" "AzureSQLDB" {
   name                = var.sql_db_name
   server_id           = azurerm_mssql_server.AzureSQLServer.id
@@ -319,4 +325,12 @@ resource "azuread_conditional_access_policy" "Linux" {
     operator          = "AND"
     built_in_controls = ["block"]
   }
+}
+
+## Output
+output "username" {
+  value = "${var.user_name1}@${var.domain}"
+}
+output "password" {
+  value = var.user_password1
 }
