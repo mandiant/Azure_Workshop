@@ -196,7 +196,7 @@ resource "azurerm_key_vault" "InnovationDeptKeyVault" {
 
 resource "azurerm_key_vault_secret" "ForPW" {
   name          = "ForPW"
-  value         = "${var.user_password3}"
+  value         = "${var.user_password2}"
   key_vault_id  = azurerm_key_vault.InnovationDeptKeyVault.id
   depends_on    = [azurerm_key_vault.InnovationDeptKeyVault]
 }
