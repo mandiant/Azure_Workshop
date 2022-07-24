@@ -17,7 +17,8 @@ az keyvault secret show --vault-name <\KeyVaultName> --name <\SecretName>
 az login -u <\UserName> -p <\Password>
 az role assignment list --all --assignee <\UserName>
 
-- from PW user office field, he's expected to log in from a Linux machine (COnditional Access rules). extract access token from Linux machine or az on Windows (az seems to bypass the application type)
+- from PW user department field, he's expected to log in from a Linux machine (Conditional Access rules)
+- extract access token from Linux machine or using az on Windows (az seems to bypass the application type)
 az account get-access-token
 
 - import the above access token and login on a Windows machine
