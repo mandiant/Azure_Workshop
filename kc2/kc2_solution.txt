@@ -26,8 +26,8 @@ az vm list -g <\ResourceGroup> --output table
 az vm run-command invoke --command-id RunPowerShellScript --name <\WindowsVM> --resource-group <\ResourceGroup> --scripts 'net user user1 Passw0rd! /add’
 az vm run-command invoke --command-id RunPowerShellScript --name <\WindowsVM> -g <\ResourceGroup> --script "net localgroup Administrators user1 /add"
 
-- LinuxVM also has Reader role on on InternalNIC -> get the internal IP of the WindowsVM from the associated InternalNIC:
-az vm nic show -g engineering --vm-name WindowsVM --nic InternalNIC1
+- find out WindowsVM internal IP
+az vm run-command invoke --command-id RunPowerShellScript --name <\WindowsVM> -g <\ResourceGroup> --script "ipconfig"
 
 - RDP in via local port forwarding
 ssh -i blobsecret.txt -L 3389:<\internal-IP>:3389 azureuser@<\PublicIp>

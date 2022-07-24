@@ -25,7 +25,7 @@ Connect-AzAccount -AccountId <\UserName> -AccessToken $token
 Import-Module .\Get-AzPasswords.ps1
 
 - extract credentials from the automation account using MicroBurst script
-Get-AzPasswords -AutomationAccounts Y -Keys N -AppServices N -StorageAccounts N -ExportCerts N -Subscription <\SubscriptionID> -Verbose -CosmosDB N
+Get-AzPasswords -AutomationAccounts Y -Subscription <\SubscriptionID> -Verbose
 
 - login as the sqladmin user and list current roles
 az login -u <\UserName> -p <\Password>
