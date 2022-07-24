@@ -163,7 +163,7 @@ resource "azurerm_key_vault" "InnovationDeptKeyVault" {
   tenant_id                   = data.azurerm_client_config.current.tenant_id
   soft_delete_retention_days  = 7
   purge_protection_enabled    = false
-  sku_name          = "standard"
+  sku_name                    = "standard"
 
   access_policy {
     tenant_id = data.azurerm_client_config.current.tenant_id
@@ -214,7 +214,7 @@ resource "azurerm_automation_credential" "sa" {
   name                    = "sa"
   resource_group_name     = azurerm_resource_group.innovation.name
   automation_account_name = azurerm_automation_account.InnovationAutomationAccount.name
-  username                = "sa@softwaresolutions.com"
+  username                = "sa@softwaresolutionsdons.com"
   password                = "gROzIH&L2Zu4Ya"
 }
 
