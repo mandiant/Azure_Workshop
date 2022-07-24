@@ -51,4 +51,4 @@ Kill-Chain #2:
 
 - Solutions: The full attack path solutions can be found in kc2/kc2_solution.txt
 
-Other resources and useful links to learn more can be found in resources.txt
+Other resources and useful links to learn more can be found in resources.txt file.
