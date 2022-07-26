@@ -1,6 +1,6 @@
 # Azure Red Team Attack and Detect Workshop
 
-This is a vulnerable-by-design Azure lab, containing 2 x attack paths with common misconfigurations. These vulnerabilities are intended to be representative to those found in live, production environments and the attack vectors are intended to be as realistic as possible to real Threat Actors TTPs. If you would like to see what detections and alerts these attack path vectors are causing, I recommend signing up for a Microsoft E5 trial which has Microsoft Defender for Cloud as well as Azure AD premium P2 plan. Links for signing up to an Azure Developer account can be found in the resources.txt file.
+This is a vulnerable-by-design Azure lab, containing 2 x attack paths with common misconfigurations. These vulnerabilities are intended to be representative to those found in live, production environments and the attack vectors are intended to be as realistic as possible to real Threat Actors TTPs. If you would like to see what detections and alerts these attack path vectors are causing, I recommend signing up for a Microsoft E5 trial which has Microsoft Defender for Cloud as well as Azure AD premium P2 plan. Sign up to an Azure Developer account [here](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
 
 Each kill-chain has in its folder the Terraform script (and other pre-reqs files needed for deployment) as well as the solutions to the challenges.
 
