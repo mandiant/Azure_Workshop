@@ -1,4 +1,5 @@
 # Author: Roxana Kovaci
+# Twitter: @RoxanaKovaci
 
 #############################################################################
 # VARIABLES
