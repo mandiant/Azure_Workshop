@@ -7,7 +7,7 @@ Each kill-chain has in its folder the Terraform script (and other pre-reqs files
 ## Requirements
 - Azure tenant
 - Azure CLI
-- Terafform version 1.2.2 or above
+- Terraform version 1.2.2 or above
 - Azure User with Global Admin role in the AAD tenant
 - add your external IP on lines 248-249 in kc1.tf
 
