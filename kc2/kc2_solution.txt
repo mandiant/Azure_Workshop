@@ -1,3 +1,6 @@
+# Author: Roxana Kovaci
+# Twitter: @RoxanaKovaci
+
 - katie.parkson has Reader + Storage Blob Data Reader roles on a storage account
 az role assignment list --all --assignee <\UserName>
 az storage account list
