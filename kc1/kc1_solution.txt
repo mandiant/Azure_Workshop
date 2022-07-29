@@ -1,3 +1,6 @@
+# Author: Roxana Kovaci
+# Twitter: @RoxanaKovaci
+
 - chris.green has Application Administrator role which means he can add credentials to the InnovationApp
 az login -u <\UserName> -p <\Password> --allow-no-subscriptions
 az ad app list --query "[].[displayName,appID]" -o table
