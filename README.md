@@ -2,7 +2,7 @@
 
 This is a vulnerable-by-design Azure lab containing 2 x attack paths with common misconfigurations. These vulnerabilities are intended to represent those found in live production environments and the attack vectors are intended to be as realistic as possible to real Threat Actors TTPs. If you would like to see what detections and alerts these attack path vectors are causing, I recommend signing up for a Microsoft E5 trial which has Microsoft Defender for Cloud and Azure AD premium P2 plan. Links for signing up to an Azure Developer account can be found in the resources.txt file.
 
-Each kill-chain has in its folder the Terraform script (and other pre-reqs files needed for deployment) and the solutions to the challenges.
+Author - Roxana Kovaci (@RoxanaKovaci)
 
 ## Requirements
 - Azure tenant
@@ -51,6 +51,8 @@ Kill-Chain #2:
 - Objective: Gain access to the super secret file.
 
 - Solutions: The full attack path solutions can be found in kc2/kc2_solution.txt
+
+Each kill-chain has in its folder the Terraform script (and other pre-reqs files needed for deployment) and the solutions to the challenges.
 
 Other resources and useful links to learn more can be found in resources.txt file.
 
