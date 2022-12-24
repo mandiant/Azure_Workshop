@@ -5,7 +5,7 @@
 az role assignment list --all --assignee <\UserName>
 az storage account list
 az storage container list --account-name <\StorageAccountName> --auth-mode login
-az storage blob list --container-name <\ContainerName> --account-name <\StorageAccountName> --auth-mde login
+az storage blob list --container-name <\ContainerName> --account-name <\StorageAccountName> --auth-mode login
 az storage blob download --container-name <\ContainerName> --account-name <\StorageAccountName> --name <\BlobName> --file blobsecret.txt --auth-mde login
 
 - katie.parkson has Owner role on LinuxVMNSG -> can add an SSH firewall rule
