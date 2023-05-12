@@ -9,7 +9,7 @@ Author - Roxana Kovaci (@RoxanaKovaci)
 - Azure CLI
 - Terraform version 1.2.2 or above
 - Azure User with Global Admin role in the AAD tenant
-- add your external IP on lines 248-249 in kc1.tf
+- add your external IP on lines 251-252 in kc1.tf
 
 ## Deployment
 ```
